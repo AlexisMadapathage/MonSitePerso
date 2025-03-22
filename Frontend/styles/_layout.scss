@@ -1,0 +1,61 @@
+// STRUCTURE GLOBALE DU SITE
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+// HEADER (Disposition)
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    nav ul {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: $primary-color;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// SECTIONS "SKILLS" & "PROJECTS" (Disposition)
+#skills, #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    .skill-category,
+    .project {
+        width: 30%;
+        padding: 15px;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; // Espacement entre les catégories
+}
+
+.project-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; // Espacement entre les projets
+}

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-primary; // Poppins par défaut
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+// Appliquer Orbitron aux titres
+h1, h2, h3 {
+    font-family: $font-secondary; // Orbitron pour les titres
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: $font-secondary; // Orbitron
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 300px; 
+        height: 2px; // Hauteur de la barre
+        background-color: $secondary-color; // Jaune moutarde
+        margin: 10px auto 0;
+    }
+}
+
+header {
+    background: url("../assets/Fond.png") center/cover no-repeat;
+    height: 150vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}

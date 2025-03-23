@@ -33,8 +33,8 @@ h1::after {
 }
 
 header {
-  background: url("../assets/Fond.png") center/cover no-repeat;
-  height: 150vh;
+  background: url("../assets/Fond.webp") center/cover no-repeat;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,9 +43,10 @@ header {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 header {
@@ -57,87 +58,286 @@ header {
 header nav ul {
   display: flex;
   list-style: none;
-}
-header nav ul li {
-  margin: 0 15px;
+  gap: 20px;
 }
 header nav ul li a {
   text-decoration: none;
-  color: #1E3A8A;
   font-weight: bold;
-}
-
-#skills, #projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-#skills .skill-category,
-#skills .project, #projects .skill-category,
-#projects .project {
-  width: 30%;
-  padding: 15px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
 }
 
 .skills-list {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  width: 100%;
+}
+.skills-list .skill-category {
+  flex: 1;
+  max-width: 33%;
+  padding: 0 20px;
 }
 
 .project-flex {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project {
+  flex: 0 1 calc(50% - 30px);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.project:hover {
+  transform: translateY(-5px);
+}
+.project h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.project p {
+  margin-bottom: 10px;
+}
+.project .tools-used {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 #about {
-  text-align: center;
-  padding: 50px 0;
+  padding: 100px 0 0 0;
+  background-color: #1E3A8A;
 }
-#about h2 {
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+#about .container .about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+#about .container .about-text h2 {
   font-family: "Orbitron", sans-serif;
-  color: #1E3A8A;
-}
-
-#contacts {
-  text-align: center;
-  background: #FBBF24;
-  padding: 40px;
-}
-#contacts form {
-  max-width: 600px;
-  margin: auto;
-}
-#contacts form input, #contacts form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #333;
-  border-radius: 5px;
-}
-#contacts form button {
-  background: #1E3A8A;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+  position: relative;
+}
+#about .container .about-text h2::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 4px;
+  background-color: #FBBF24;
+  margin: 10px 0 0;
+}
+#about .container .about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: white;
+}
+#about .container .about-text p strong {
+  font-weight: bold;
+}
+#about .container .about-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+#about .container .about-image img {
+  width: 100%;
+  max-width: 400px;
 }
 
-#skills, #projects, #contacts {
-  height: 150vh;
+#skills,
+#projects {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 50px 0;
+}
+
+#skills h2,
+#projects h2 {
+  position: relative;
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  padding-bottom: 50px;
+  color: #1E3A8A;
+}
+#skills h2::after,
+#projects h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  background-color: #FBBF24;
+  margin: 10px auto 0;
+}
+
+.skills-list {
+  background: #1E3A8A;
+  padding: 50px;
+}
+.skills-list .skill-category {
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+.skills-list .skill-category:not(:first-child) {
+  border-left: 4px solid #FBBF24;
+}
+.skills-list .skill-category h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.skills-list .skill-category h3 i {
+  font-size: 2rem;
+  color: white;
+}
+.skills-list .skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+.skills-list .skill-category ul li {
+  margin-bottom: 10px;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.skill-icons li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-icons li img {
+  width: 50px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+.skill-icons li img:hover {
+  transform: scale(1.1);
+}
+
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  color: #333;
+}
+
+.used-tools {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#contacts {
+  background: url("../assets/Fond.webp") center/cover no-repeat;
+  padding: 80px 0;
+  min-height: 80vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#contacts h2 {
+  font-family: white;
+  font-size: 2.5rem;
+  color: white;
+}
+#contacts h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: #FBBF24;
+  margin: 10px auto 20px;
+}
+#contacts p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+#contacts form {
+  background: rgba(0, 0, 30, 0.7);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contacts form label {
+  font-size: 1.1rem;
+  text-align: left;
+}
+#contacts form input,
+#contacts form textarea {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #FBBF24;
+  color: white;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+#contacts form input:focus,
+#contacts form textarea:focus {
+  outline: none;
+  border-bottom-color: rgb(251.9147982063, 205.6367713004, 86.0852017937);
+}
+#contacts form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+#contacts form button {
+  align-self: center;
+  background-color: #1E3A8A;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+#contacts form button:hover {
+  background-color: rgb(20.8928571429, 40.3928571429, 96.1071428571);
 }
 
 /*# sourceMappingURL=main.css.map */

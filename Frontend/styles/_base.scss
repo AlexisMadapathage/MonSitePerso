@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -35,8 +36,8 @@ h1 {
 }
 
 header {
-    background: url("../assets/Fond.png") center/cover no-repeat;
-    height: 150vh; 
+    background: url("../assets/Fond.webp") center/cover no-repeat;
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;

@@ -9,10 +9,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Orbitron:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Orbitron:wght@400&display=swap"
+		rel="stylesheet">
 	<link rel="icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vEX+zRZrVZhxJ++6F1fJqDH8MiI0ShIbjs64PkSxhnT8qIgEdI7Qdu9CE8cp3gkJBLZjxu/OaVPZ3G0ssKOqXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 	<!--Open Graph-->
 	<meta property="og:title" content="Portfolio d'Alexis - Développeur Web" />
@@ -75,11 +78,16 @@
 
 	<section id="about">
 		<div class="container">
-			<h2>Hey, moi c'est Alexis</h2>
-			<p>Concepteur et développeur web passionné, touche-à-tout.<br>
-				Caméléon social et amateur de caféine (indispensable pour les longues sessions de code)...<br>
-				J’aime créer des solutions web performantes et ergonomiques, avec une touche d’originalité !
-			</p>
+			<div class="about-text">
+				<h2>Hey, moi c'est Alexis</h2>
+				<p>Concepteur et développeur web passionné, touche-à-tout.<br>
+					Caméléon social et amateur de caféine (indispensable pour les longues sessions de code)...<br>
+					J’aime créer des solutions web performantes et ergonomiques, avec une touche d’originalité !
+				</p>
+			</div>
+			<div class="about-image">
+				<img src="assets/MA.webp" alt="PixAlexis">
+			</div>
 		</div>
 	</section>
 
@@ -88,24 +96,30 @@
 			<h2>Skills</h2>
 			<div class="skills-list">
 				<div class="skill-category">
-					<h3>Développement</h3>
-					<ul>
-						<li>HTML / CSS / SASS</li>
-						<li>JavaScript / React / Node.js</li>
-						<li>MongoDB / Express.js</li>
+					<h3><i class="fa-solid fa-gear"></i>Développement</h3>
+					<ul class="skill-icons">
+						<li><img src="assets/icons/html5.svg" alt="HTML"></li>
+						<li><img src="assets/icons/css.svg" alt="CSS"></li>
+						<li><img src="assets/icons/sass.svg" alt="SASS"></li>
+						<li><img src="assets/icons/javascript.svg" alt="JavaScript"></li>
+						<li><img src="assets/icons/react.svg" alt="React"></li>
+						<li><img src="assets/icons/nodedotjs.svg" alt="Node"></li>
+						<li><img src="assets/icons/mongodb.svg" alt="MongoDB"></li>
+						<li><img src="assets/icons/dotenv.svg" alt="Dotenv"></li>
 					</ul>
 				</div>
 				<div class="skill-category">
-					<h3>Outils</h3>
-					<ul>
-						<li>Git / GitHub</li>
-						<li>Figma / Canva</li>
-						<li>VSCode</li>
+					<h3><i class="fa-solid fa-wrench"></i>Outils</h3>
+					<ul class="skill-icons">
+						<li><img src="assets/icons/git.svg" alt="git"></li>
+						<li><img src="assets/icons/github.svg" alt="Github"></li>
+						<li><img src="assets/icons/figma.svg" alt="Figma"></li>
+						<li><img src="assets/icons/canva.svg" alt="Canva"></li>
 					</ul>
 				</div>
 				<div class="skill-category">
-					<h3>Savoir-faire</h3>
-					<ul>
+					<h3><i class="fa-solid fa-book-atlas"></i>Savoir-faire</h3>
+					<ul class="skill-icons">
 						<li>Responsive Design</li>
 						<li>Optimisation SEO</li>
 						<li>Développement API</li>
@@ -117,31 +131,31 @@
 
 	<section id="projects">
 		<div class="container">
-			<h2>Mes Projets</h2>
+			<h2>Projets</h2>
 			<div class="project-flex">
 				<article class="project">
 					<h3>Booki</h3>
 					<p>Site d'une agence de voyage</p>
-					<p>Outils utilisés : HTML et CSS</p>
 					<a href="#" class="project-link">Voir le projet</a>
+					<p class="used-tools">Outils utilisés : HTML et CSS</p>
 				</article>
 				<article class="project">
-					<h3>Sophie Bluel, Architect d'intérieur</h3>
-					<p>Description rapide du projet.</p>
-					<p>Outils utilisés : HTML, CSS et JavaScript</p>
+					<h3>Site de Sophie Bluel</h3>
+					<p>Architecte d'intérieur</p>
 					<a href="#" class="project-link">Voir le projet</a>
+					<p class="used-tools">Outils utilisés : HTML, CSS et JavaScript</p>
 				</article>
 				<article class="project">
 					<h3>Kasa</h3>
 					<p>Application de location immobilière</p>
-					<p>Outils utilisés : React, React Router, CSS SASS, Node.js/p>
-						<a href="#" class="project-link">Voir le projet</a>
+					<a href="#" class="project-link">Voir le projet</a>
+					<p class="used-tools">Outils utilisés : React, React Router, CSS SASS, Node.js</p>
 				</article>
 				<article class="project">
 					<h3>Mon Vieux Grimoire</h3>
 					<p>Développement du backend d'un site de notation de livres</p>
-					<p>Outils utilisés : MongoDB, Express.js, Node.js</p>
 					<a href="#" class="project-link">Voir le projet</a>
+					<p class="used-tools">Outils utilisés : MongoDB, Express.js, Node.js</p>
 				</article>
 			</div>
 		</div>
@@ -178,4 +192,5 @@
 	</footer>
 
 </body>
+
 </html>

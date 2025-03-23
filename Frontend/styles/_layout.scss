@@ -1,61 +1,79 @@
 // STRUCTURE GLOBALE DU SITE
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
-}
-
-// HEADER (Disposition)
-header {
+    padding: 0 20px;
+  }
+  
+  // HEADER (Disposition uniquement)
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-
+  
     nav ul {
-        display: flex;
-        list-style: none;
-
-        li {
-            margin: 0 15px;
-
-            a {
-                text-decoration: none;
-                color: $primary-color;
-                font-weight: bold;
-            }
-        }
+      display: flex;
+      list-style: none;
+      gap: 20px;
+  
+      li a {
+        text-decoration: none;
+        font-weight: bold;
+      }
     }
-}
-
-// SECTIONS "SKILLS" & "PROJECTS" (Disposition)
-#skills, #projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    .skill-category,
-    .project {
-        width: 30%;
-        padding: 15px;
-        background: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-}
-
-.skills-list {
+  }
+  
+  // SECTION SKILLS
+  .skills-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px; // Espacement entre les catégories
-}
-
-.project-flex {
+    width: 100%;
+  
+    .skill-category {
+      flex: 1;
+      max-width: 33%;
+      padding: 0 20px;
+    }
+  }
+  
+  // SECTION PROJECTS
+  .project-flex {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; // Espacement entre les projets
-}
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .project {
+    flex: 0 1 calc(50% - 30px); // 2 colonnes avec un peu de marge
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    h3 {
+      font-family: $font-secondary;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin-bottom: 10px;
+    }
+  
+    .tools-used {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  }    

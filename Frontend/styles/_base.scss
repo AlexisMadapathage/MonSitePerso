@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
@@ -12,14 +11,13 @@ body {
     line-height: 1.6;
 }
 
-// Appliquer Orbitron aux titres
+// Applique Orbitron aux titres
 h1, h2, h3 {
-    font-family: $font-secondary; // Orbitron pour les titres
+    font-family: $font-secondary; 
 }
 
 h1 {
     font-size: 3rem;
-    font-family: $font-secondary; // Orbitron
     text-align: center;
     position: relative;
     display: inline-block;
@@ -30,7 +28,7 @@ h1 {
         display: block;
         width: 300px; 
         height: 2px; // Hauteur de la barre
-        background-color: $secondary-color; // Jaune moutarde
+        background-color: $secondary-color; 
         margin: 10px auto 0;
     }
 }
@@ -44,3 +42,20 @@ header {
     color: white;
     text-align: center;
 }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .project.hovered {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }

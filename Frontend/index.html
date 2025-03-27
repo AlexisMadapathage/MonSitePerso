@@ -12,9 +12,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Orbitron:wght@400&display=swap"
 		rel="stylesheet">
 	<link rel="icon" href="./favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vEX+zRZrVZhxJ++6F1fJqDH8MiI0ShIbjs64PkSxhnT8qIgEdI7Qdu9CE8cp3gkJBLZjxu/OaVPZ3G0ssKOqXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 	<!--Open Graph-->
@@ -52,34 +53,59 @@
 			"postalCode": "34200",
 			"addressCountry": "FR"
 		  },
-		  ],
 		  "sameAs": [
 			"<!-- A COMPLETER-->"
 		  ]
 		}
 		</script>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script>
+		(function () {
+			emailjs.init("u4OspFC_RoZNutkrw"); // Mon ID EmailJS
+		})();
+	</script>
+
 </head>
 
 <body>
+
+	<!-- Navigation Mobile -->
+	<nav class="mobile-nav">
+		<ul>
+			<li><a href="#about">À propos</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#projects">Projets</a></li>
+			<li><a href="#contacts">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Navigation latérale sticky -->
+	<nav class="planet-nav">
+		<a href="#about" class="planet-link" data-label="À propos">
+			<i class="fa-solid fa-earth-europe"></i>
+		</a>
+		<a href="#skills" class="planet-link" data-label="Skills">
+			<i class="fa-solid fa-earth-europe"></i>
+		</a>
+		<a href="#projects" class="planet-link" data-label="Projets">
+			<i class="fa-solid fa-earth-europe"></i>
+		</a>
+		<a href="#contacts" class="planet-link" data-label="Contact">
+			<i class="fa-solid fa-earth-europe"></i>
+		</a>
+	</nav>
+
 	<header>
 		<div class="container">
 			<h1>Alexis Madapathage</h1>
 			<p>Développeur Web</p>
-			<nav>
-				<ul>
-					<li><a href="#about">À propos</a></li>
-					<li><a href="#skills">Compétences</a></li>
-					<li><a href="#projects">Projets</a></li>
-					<li><a href="#contacts">Contact</a></li>
-				</ul>
-			</nav>
 		</div>
 	</header>
 
 	<section id="about">
 		<div class="container">
 			<div class="about-text">
-				<h2>Hey, moi c'est Alexis</h2>
+				<h2 class="reveal">Hey, moi c'est Alexis</h2>
 				<p>Concepteur et développeur web passionné, touche-à-tout.<br>
 					Caméléon social et amateur de caféine (indispensable pour les longues sessions de code)...<br>
 					J’aime créer des solutions web performantes et ergonomiques, avec une touche d’originalité !
@@ -93,28 +119,47 @@
 
 	<section id="skills">
 		<div class="container">
-			<h2>Skills</h2>
+			<h2 class="reveal">Skills</h2>
 			<div class="skills-list">
 				<div class="skill-category">
 					<h3><i class="fa-solid fa-gear"></i>Développement</h3>
 					<ul class="skill-icons">
-						<li><img src="assets/icons/html5.svg" alt="HTML"></li>
-						<li><img src="assets/icons/css.svg" alt="CSS"></li>
-						<li><img src="assets/icons/sass.svg" alt="SASS"></li>
-						<li><img src="assets/icons/javascript.svg" alt="JavaScript"></li>
-						<li><img src="assets/icons/react.svg" alt="React"></li>
-						<li><img src="assets/icons/nodedotjs.svg" alt="Node"></li>
-						<li><img src="assets/icons/mongodb.svg" alt="MongoDB"></li>
-						<li><img src="assets/icons/dotenv.svg" alt="Dotenv"></li>
+						<li><img src="assets/icons/html5.svg" alt="HTML"><span class="logo-label">HTML</span></li>
+						<li><img src="assets/icons/css.svg" alt="CSS"><span class="logo-label">CSS</span></li>
+						<li><img src="assets/icons/sass.svg" alt="SASS"><span class="logo-label">SASS</span></li>
+						<li><img src="assets/icons/javascript.svg" alt="JavaScript"><span
+								class="logo-label">Javascript</span></li>
+						<li><img src="assets/icons/react.svg" alt="React"><span class="logo-label">React</span></li>
+						<li><img src="assets/icons/nodedotjs.svg" alt="Node"><span class="logo-label">Node.js</span>
+						</li>
+						<li><img src="assets/icons/mongodb.svg" alt="MongoDB"><span class="logo-label">MongoDB</span>
+						</li>
+						<li><img src="assets/icons/dotenv.svg" alt="Dotenv"><span class="logo-label">Dotenv</span></li>
+					</ul>
+					<ul class="skill-names">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>SASS</li>
+						<li>JavaScript</li>
+						<li>React</li>
+						<li>Node.js</li>
+						<li>MongoDB</li>
+						<li>Dotenv</li>
 					</ul>
 				</div>
 				<div class="skill-category">
 					<h3><i class="fa-solid fa-wrench"></i>Outils</h3>
 					<ul class="skill-icons">
-						<li><img src="assets/icons/git.svg" alt="git"></li>
-						<li><img src="assets/icons/github.svg" alt="Github"></li>
-						<li><img src="assets/icons/figma.svg" alt="Figma"></li>
-						<li><img src="assets/icons/canva.svg" alt="Canva"></li>
+						<li><img src="assets/icons/git.svg" alt="git"><span class="logo-label">Git</span></li>
+						<li><img src="assets/icons/github.svg" alt="Github"><span class="logo-label">Github</span></li>
+						<li><img src="assets/icons/figma.svg" alt="Figma"><span class="logo-label">Figma</span></li>
+						<li><img src="assets/icons/canva.svg" alt="Canva"><span class="logo-label">Canva</span></li>
+					</ul>
+					<ul class="skill-names">
+						<li>Git</li>
+						<li>Github</li>
+						<li>Figma</li>
+						<li>Canva</li>
 					</ul>
 				</div>
 				<div class="skill-category">
@@ -124,6 +169,10 @@
 						<li>Optimisation SEO</li>
 						<li>Développement API</li>
 					</ul>
+					<ul class="skill-names">
+						<li>Responsive Design</li>
+						<li>Optimisation SEO</li>
+						<li>Développement API</li>
 				</div>
 			</div>
 		</div>
@@ -131,45 +180,20 @@
 
 	<section id="projects">
 		<div class="container">
-			<h2>Projets</h2>
-			<div class="project-flex">
-				<article class="project">
-					<h3>Booki</h3>
-					<p>Site d'une agence de voyage</p>
-					<a href="#" class="project-link">Voir le projet</a>
-					<p class="used-tools">Outils utilisés : HTML et CSS</p>
-				</article>
-				<article class="project">
-					<h3>Site de Sophie Bluel</h3>
-					<p>Architecte d'intérieur</p>
-					<a href="#" class="project-link">Voir le projet</a>
-					<p class="used-tools">Outils utilisés : HTML, CSS et JavaScript</p>
-				</article>
-				<article class="project">
-					<h3>Kasa</h3>
-					<p>Application de location immobilière</p>
-					<a href="#" class="project-link">Voir le projet</a>
-					<p class="used-tools">Outils utilisés : React, React Router, CSS SASS, Node.js</p>
-				</article>
-				<article class="project">
-					<h3>Mon Vieux Grimoire</h3>
-					<p>Développement du backend d'un site de notation de livres</p>
-					<a href="#" class="project-link">Voir le projet</a>
-					<p class="used-tools">Outils utilisés : MongoDB, Express.js, Node.js</p>
-				</article>
-			</div>
+			<h2 class="reveal">Projets</h2>
+			<div id="project-container" class="project-flex"></div>
 		</div>
 	</section>
 
 	<section id="contacts">
 		<div class="container">
-			<h2>Parlons-en</h2>
+			<h2 class="reveal">Parlons-en</h2>
 			<p>En recherche d’alternant ? Un projet génialissime à me confier ? Je suis tout ouïe.</p>
 			<form id="contact-form">
-				<label for="name">Nom </label>
+				<label for="lastname">Nom </label>
 				<input type="text" id="lastname" name="lastname" required>
 
-				<label for="name">Prénom </label>
+				<label for="firstname">Prénom </label>
 				<input type="text" id="firstname" name="firstname" required>
 
 				<label for="email">Email</label>
@@ -190,7 +214,8 @@
 					confidentialité</a></p>
 		</div>
 	</footer>
-
+	<script src="scripts/projectsData.js"></script>
+	<script src="scripts/main.js"></script>
 </body>
 
 </html>

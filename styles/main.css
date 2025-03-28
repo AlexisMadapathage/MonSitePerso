@@ -181,7 +181,7 @@ header nav ul li a {
 
 #about {
   background-color: #1E3A8A;
-  height: 100vh;
+  height: 100%;
 }
 #about .container {
   padding: 110px 0 0 0;
@@ -232,6 +232,11 @@ header nav ul li a {
   padding: 0;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #about {
+    padding-top: 30px;
+  }
+}
 #skills,
 #projects {
   display: flex;

@@ -3,7 +3,7 @@
 // SECTION A PROPOS
 #about {
   background-color: #1E3A8A;
-  height: 100vh;
+  height: 100%;
 
   .container {
     padding: 110px 0 0 0;
@@ -59,6 +59,12 @@
         padding: 0;
       }
     }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #about {
+    padding-top: 30px; // corrige le bug sur Chrome/Edge
   }
 }
 
